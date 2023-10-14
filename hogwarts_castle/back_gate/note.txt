@@ -1,0 +1,13 @@
+To kill this monster, you need to use a secret spell. The spell has been encoded
+using a **caesar cipher** meaning that the letters of the original message have
+been rotated!
+
+For example, rotating the word "hello" once results in "ifmmp".
+
+Use the `rotate` spell to decode the message below and slay the monster:
+
+```
+Kyv jgvcc kyrk pfl evvu kf ivdfmv kyv dfejkvi zj id
+```
+
+Hint: The first letter of the message is a "T"

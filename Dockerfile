@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get -y install vim sl zsh curl git python3 python3-pip && \
     pip3 install click prompt_toolkit
 
+COPY ./bin/* /usr/bin
 COPY ./hogwarts /hogwarts
 COPY ./hogsmeade /hogsmeade
 COPY ./kings_cross /kings_cross

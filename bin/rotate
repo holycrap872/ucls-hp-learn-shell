@@ -1,0 +1,54 @@
+#!/bin/python3
+import sys
+
+
+def print_usage() -> None:
+    print('Usage: rotate -n INTEGER "MESSAGE_TO_DECRYPT"')
+
+
+def caesar_cipher(s: str, rotation: int) -> None:
+    """
+    Encrypts the string s using a Caesar cipher with the given rotation.
+    """
+    encrypted = []
+    
+    for char in s:
+        if char.isalpha():
+            shifted = ord(char) + rotation
+            if char.islower():
+                if shifted > ord('z'):
+                    shifted -= 26
+                elif shifted < ord('a'):
+                    shifted += 26
+            elif char.isupper():
+                if shifted > ord('Z'):
+                    shifted -= 26
+                elif shifted < ord('A'):
+                    shifted += 26
+            encrypted.append(chr(shifted))
+        else:
+            encrypted.append(char)
+
+    return ''.join(encrypted)
+
+
+def rotate() -> None:
+    try:
+        if len(sys.argv) < 4:
+            print_usage()
+            return
+
+        if sys.argv[1] != "-n":
+            print_usage()
+            return
+
+        amt = int(sys.argv[2])
+        phrase = " ".join(sys.argv[3:]).strip().strip("'").strip('"')
+
+        print(caesar_cipher(phrase, amt))
+    except Exception as e:
+        print_usage()
+
+
+if __name__ == "__main__":
+    rotate()
