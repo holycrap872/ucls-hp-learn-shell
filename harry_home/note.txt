@@ -1,3 +1,4 @@
+
 Lo' Harry,
 
 It's me Hagrid. Something weird is going on at Hogwarts!
@@ -9,7 +10,4 @@ instructions.
 Magically yours,
 Rubeus Hagrid
 
-..-   -.   -..   .   .-. 
-..   -.   ...   -   .-.   ..-   -.-.   -   ---   .-.   ...
--..   .   ...   -.-
 

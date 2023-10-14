@@ -1,0 +1,92 @@
+#!/bin/python3
+import json
+import os
+import subprocess
+
+
+MORSE_DICT = {
+    'A': '._',
+    'B': '_...',
+    'C': '_._.',
+    'D': '_..',
+    'E': '.',
+    'F': '.._.',
+    'G': '__.',
+    'H': '....',
+    'I': '..',
+    'J': '.___',
+    'K': '_._',
+    'L': '._..',
+    'M': '__',
+    'N': '_.',
+    'O': '___',
+    'P': '.__.',
+    'Q': '__._',
+    'R': '._.',
+    'S': '...',
+    'T': '_',
+    'U': '.._',
+    'V': '..._',
+    'W': '.__',
+    'X': '_.._',
+    'Y': '_.__',
+    'Z': '__..',
+    '1': '.____',
+    '2': '..___',
+    '3': '...__',
+    '4': '...._',
+    '5': '.....',
+    '6': '_....',
+    '7': '__...',
+    '8': '___..',
+    '9': '____.',
+    '0': '_____',
+}
+
+
+def do_morse_code(output_file: str, phrase_str: str) -> None:
+    words = []
+    for word in phrase_str.split():
+        words.append("   ".join(MORSE_DICT[i.upper()] for i in word))
+    write_str = "\n".join(words)
+
+    with open(output_file, "a") as output_fp:
+        output_fp.write(write_str)
+        output_fp.write("\n\n\n")
+
+
+def do_dewey_code(output_file: str, dewey_code: str) -> None:
+
+    with open(output_file, "a") as output_fp:
+        output_fp.write(dewey_code)
+        output_fp.write("\n\n\n")
+
+
+def do_final_clue(output_file: str, program: str) -> None:
+    with open(output_file, "w") as output_fp:
+        output_fp.write(program)
+        output_fp.write("\n\n\n")
+
+
+def setup_harry_potter() -> None:
+    index = int(os.environ.get("IDENTIFIER", "0"))
+
+    # Morse modifier
+    with open("/metadata/metadata.json", "r") as md_fp:
+        json_dict = json.load(md_fp)
+
+    phrase = json_dict["1"]["clues"][index]
+    do_morse_code("/home/harry/note.txt", phrase)
+
+    # Dewey dump
+    dewey_code = json_dict["2"]["clues"][index]
+    do_dewey_code("/hogwarts/crumpled_piece_of_paper.txt", dewey_code)
+
+    # Program point 
+    program = json_dict["3"]["clues"][index]
+    do_final_clue("/var/hogwarts_castle/front_door/.under_rock.txt", program)
+
+
+if __name__ == "__main__":
+    setup_harry_potter()
+
