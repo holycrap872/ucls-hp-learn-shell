@@ -1,1 +1,1 @@
-You made it!
+You made it! Now you can apparate to hogwarts (`/var/hogwarts_castle`)

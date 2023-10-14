@@ -4,12 +4,13 @@ FROM ubuntu
 
 RUN apt-get update && \
     apt-get -y install vim sl zsh curl git python3 python3-pip && \
-    pip3 install PyInquirer click prompt_toolkit
+    pip3 install click prompt_toolkit
 
 COPY ./hogwarts /hogwarts
 COPY ./hogsmeade /hogsmeade
 COPY ./kings_cross /kings_cross
 COPY ./diagon_alley /diagon_alley
+COPY ./hogwarts_castle /var/hogwarts_castle
 
 RUN useradd -ms /bin/bash harry
 USER harry
