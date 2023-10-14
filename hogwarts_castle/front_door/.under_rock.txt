@@ -1,0 +1,9 @@
+Face straight out door
+Move 5 feet forward
+Turn 90 degrees right
+Move 60 feet forward
+Turn 90 degrees left
+Move 5 feet forward
+Extend hand
+Lift up
+

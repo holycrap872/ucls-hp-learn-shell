@@ -1,4 +1,5 @@
 #!/bin/python3
+import os
 import time
 
 DUMBLEDORE = """
@@ -58,7 +59,7 @@ DUMBLEDORE = """
                                         ..... .    . .
 """
 
-def run_dumbledore() -> None:
+def run_dumbledore_intro() -> None:
     print(DUMBLEDORE)
     time.sleep(1)
     print("Hello Harry!")
@@ -73,10 +74,28 @@ def run_dumbledore() -> None:
     print("\n\n\n")
     print('For example, I know "Tab Complete" will be quite helpful for you')
     print('Search for it in the spell book by doing `grep "Tab Complete" ./spell_book.txt')
-    time.sleep(3)
+    time.sleep(5)
+    print("Once you're done defeating both monsters, come see me for your prize!")
+    time.sleep(5)
     print("Good luck Harry!")
 
 
+def run_dumbledore_outro() -> None:
+    print(DUMBLEDORE)
+    time.sleep(1)
+    print("Harry!!! I know you could do it!")
+    time.sleep(2)
+    print("Now it's time to claim your prize")
+    time.sleep(2)
+    print("Open up a new terminal (Application/Utilities/Terminal) and run `say I won give me candy Mr Rizzi`")
+
+
 if __name__ == "__main__":
-    run_dumbledore()
+    monster_1_alive = os.path.isfile("/var/hogwarts_castle/back_gate/monster.txt")
+    monster_2_alive = os.path.isfile("/var/hogwarts_castle/front_door/monster_friend.txt")
+    
+    if monster_1_alive or not monster_2_alive:
+        run_dumbledore_intro()
+    else:
+        run_dumbledore_outro()
 

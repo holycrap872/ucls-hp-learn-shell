@@ -11,11 +11,22 @@
 - 9: Rolled up on whiteboard in CS dept
 - 10: Empty locker
 
+## Yields
+
+`terminal_opener.docx`
+
 # Clue 2 Locations
 
 - Various books
 
+## Yields
+
+`terminal_maze.docx`
+
 # Clue 3
 
-- Secret room through CS department... lock box
+- Program to get to particular lockers/spots with hidden lock boxes
 
+## Yields
+
+`terminal_copy_monster.docx`
