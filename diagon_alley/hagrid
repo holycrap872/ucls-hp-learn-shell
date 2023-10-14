@@ -52,9 +52,10 @@ def run_hagrid() -> None:
     print(HAGRID)
     time.sleep(1)
     print("Harry, is that you? Can't be too careful!")
+    time.sleep(3)
     print("Answer this question that only you would know...")
     print("\n\n\n")
-    time.sleep(.5)
+    time.sleep(3)
     print("Q: What is the best definition of abstraction:")
     print("   A: Weird over-priced art")
     print("   B: Removing unnecessary details")
@@ -71,7 +72,7 @@ def run_hagrid() -> None:
     print("a new spell: `ls -al`. It's like 'revelio' (lumos on steroids) and")
     print("will show you hidden objects.")
     print("\n\n\n")
-    time.sleep(1)
+    time.sleep(3)
 
     print("Let's try it now!")
     ls_al = ""
@@ -79,8 +80,8 @@ def run_hagrid() -> None:
         ls_al = input("What's the new spell: ")
 
     print("\n\n\n")
-    time.sleep(.5)
-    print("You got it! Now look at all the new stuff you can see:")
+    time.sleep(4)
+    print("You got it! Now look at all the new stuff you can see in this directory:")
     print("drwxr-xr-x 4 root  root   128 Oct 14 15:15 .")
     print("drwxr-xr-x 1 root  root  4096 Oct 14 14:42 ..")
     print("-rw-r--r-- 1 harry harry   22 Oct 14 15:15 .gold_coin_under_bench")
