@@ -1,20 +1,15 @@
 Lo' Harry,
 
-It's me Hagrid. Something weird is going on at Hogwarts. Meet me at Diagon
-Alley ASAP!
+It's me Hagrid. Something weird is going on at Hogwarts!
 
-Just in case you forgot, here's some useful spells!
+I can't trust anyone right now, so I've encoded a location in a way that only
+you can decode. Once you decode the message, go to the location for further
+instructions.
 
-- `ls`
-    - Lumos (show contents of a directory)
-
-- `cd ./${FOLDER_NAME}`
-    - Change Doors (go into a directory)
-
-- `cd /${FOLDER_PATH}`
-    - Apparate (go directly to place)
-
-Once you've practiced your spells, apparate to where I am (`/diagon_alley`).
-
-Sincerely yours,
+Magically yours,
 Rubeus Hagrid
+
+..-   -.   -..   .   .-. 
+..   -.   ...   -   .-.   ..-   -.-.   -   ---   .-.   ...
+-..   .   ...   -.-
+
