@@ -1,0 +1,20 @@
+Lo' Harry,
+
+It's me Hagrid. Something weird is going on at Hogwarts. Meet me at Diagon
+Alley ASAP!
+
+Just in case you forgot, here's some useful spells!
+
+- `ls`
+    - Lumos (show contents of a directory)
+
+- `cd ./${FOLDER_NAME}`
+    - Change Doors (go into a directory)
+
+- `cd /${FOLDER_PATH}`
+    - Apparate (go directly to place)
+
+Once you've practiced your spells, apparate to where I am (`/diagon_alley`).
+
+Sincerely yours,
+Rubeus Hagrid
