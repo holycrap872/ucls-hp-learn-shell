@@ -1,0 +1,94 @@
+#!/bin/python3
+import time
+#from PyInquirer import prompt
+
+CONDUCTOR = """
+          @@@@@@@@@@@@@@@@@@@@@@@@@
+        @@   .:-----------------:  @@
+      @@ --------------------------- %@
+     @@.------------------------------ @@
+     @@+++++++++++++++++--------------++@+
+    @@@@@@@@@@@@@@@@@@@@@@@*+=--------++@%
+  @@------------------------@@++----++++@*
+*@--------------------------++@+++++++++@*
+@#+++++++++++++++++++++++++++++@++++++++@
+ %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    +@###%@@@@@:::::@@@%################@#
+    #@#@................:%@@@@@##########@@
+   #@@%@..................:::@###########@@
+     @%@.:@..........@@....:@##@@@######%%@@
+    @%%@...................:@@@::-@#####%%%%@@
+    @@#@...................:::::::@##%%%%%%@
+     @%@...................:::::+@@%%%%%%%%%@
+    @@%@#.................::::@%%%%%%%%%%%@@@@
+    @%%%@+................::::@%%%%%%%%%@%%@
+    @@%%%@@@-::::::::::::::-@@@%%%%%%%%%@%@@@
+    @@@@@@++%@##%%%%%%%%@*=@@::+@@@% #@@%
+         @@--@######%%@@@=@:::====+@
+        @@=@--@##%%%@@--@@::::@====#@
+       #@==@--#@@@@@-----@@::::=====@#
+       @@@@@-@@------@----@@:::-@@@@@@
+      @@===@-%@------@----=@*-::-=====@
+      @@@@@@-+@-----*@----+@@@@@@@@@@#@
+      %@:::@-----------=@@@@.....::::*@
+       @:::@%---------@=---@@@:..::::@#
+       @@+@-+@-------@-----@++++++%@@@
+        @%@---#@#----@-----#@#++++++@#
+          @-------#@@@-------++@@@@
+          @------=+++@-------+++++@
+          @------++++@-------+++++@
+          @+++++++###@++++++*#%%@@@
+          @#########@@############@
+         @@@@@@@@@@@@@@@@@@@@@@@@@@
+"""
+
+def question_correct(question: str, answer: str) -> bool:
+    time.sleep(1)
+    print("Q: " + question)
+    print("\n")
+
+    response = input("Your answer: ")
+    if response.lower() == answer:
+        print("Impressive!")
+        return True
+    else:
+        print("Your professors should be ashamed")
+        return False
+
+
+def question_one_correct() -> bool:
+    return question_correct("What color are directories?", "blue")
+
+
+def question_two_correct() -> bool:
+    return question_correct("What color are files?", "white")
+
+
+def question_three_correct() -> bool:
+    return question_correct("What color are programs?", "green")
+
+
+def run_hagrid() -> None:
+    print(CONDUCTOR)
+    time.sleep(1)
+    print("Trying to get on the train without paying???")
+    time.sleep(1)
+    print("You're going to have to earn your way on")
+
+    if not question_one_correct():
+        return
+
+    if not question_two_correct():
+        return
+
+    if not question_three_correct():
+        return
+
+    print("\n\n\n")
+    print("Ok, I guess you earned your way. You can get on the train to hogwarts")
+    print("Execute the spell `sl` and good luck!")
+
+
+if __name__ == "__main__":
+    run_hagrid()
+
