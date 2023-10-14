@@ -1,6 +1,5 @@
 #!/bin/python3
 import time
-#from PyInquirer import prompt
 
 MADAM_ROSMERTA = """
 ...................................................................................................
@@ -77,7 +76,7 @@ MADAM_ROSMERTA = """
 ...................................................................................................
 """
 
-def run_hagrid() -> None:
+def run_madam_rosmerta() -> None:
     print(MADAM_ROSMERTA)
     time.sleep(1)
     print("Hello Harry!")
@@ -86,5 +85,5 @@ def run_hagrid() -> None:
 
 
 if __name__ == "__main__":
-    run_hagrid()
+    run_madam_rosmerta()
 

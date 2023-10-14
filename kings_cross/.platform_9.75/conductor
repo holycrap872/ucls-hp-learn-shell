@@ -1,6 +1,5 @@
 #!/bin/python3
 import time
-#from PyInquirer import prompt
 
 CONDUCTOR = """
           @@@@@@@@@@@@@@@@@@@@@@@@@
@@ -68,7 +67,7 @@ def question_three_correct() -> bool:
     return question_correct("What color are programs?", "green")
 
 
-def run_hagrid() -> None:
+def run_conductor() -> None:
     print(CONDUCTOR)
     time.sleep(1)
     print("Trying to get on the train without paying???")
@@ -90,5 +89,5 @@ def run_hagrid() -> None:
 
 
 if __name__ == "__main__":
-    run_hagrid()
+    run_conductor()
 
