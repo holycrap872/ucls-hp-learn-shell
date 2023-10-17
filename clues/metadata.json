@@ -1,6 +1,6 @@
 {
     "1": {
-        "description": "Turned into morse code",
+        "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
             "Under instructors desk",
             "In copy room across hall under table",
@@ -16,7 +16,7 @@
         "yields": "terminal_opener.docx"
     },
     "2": {
-        "description": "Turned into ASCII art",
+        "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
             "XXXX.X.XX"
         ],

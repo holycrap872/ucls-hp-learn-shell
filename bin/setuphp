@@ -76,7 +76,7 @@ def setup_harry_potter() -> None:
         json_dict = json.load(md_fp)
 
     phrase = json_dict["1"]["clues"][index]
-    do_morse_code("/home/harry/note.txt", phrase)
+    do_morse_code("/home/harry/dear_harry.txt", phrase)
 
     # Dewey dump
     dewey_code = json_dict["2"]["clues"][index]
