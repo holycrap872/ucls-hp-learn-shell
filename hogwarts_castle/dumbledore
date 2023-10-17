@@ -61,39 +61,53 @@ DUMBLEDORE = """
 
 def run_dumbledore_intro() -> None:
     print(DUMBLEDORE)
-    time.sleep(1)
+    time.sleep(3)
     print("Hello Harry!")
     print("We need your help, there's two monsters blocking passage to the school!")
     print("Without them removed, we'll be on summer break forever!!!")
-    time.sleep(3)
+    time.sleep(7)
     print("\n\n\n")
     print("The monsters will need some special spells to defeat them.")
     print("Next to me is a spell book... use it learn new spells.")
     print('To **search** for a particular spell, do `grep "PHRASE" ./spell_book.txt.`')
-    time.sleep(3)
+    time.sleep(15)
     print("\n\n\n")
-    print('For example, I know "Tab Complete" will be quite helpful for you')
+    print("Let's try an example now!")
+    print("\n\n\n")
+    time.sleep(3)
+    print("Let's say you want to find all instances of \"hello\" in ./spell_book.txt")
+    time.sleep(3)
+    grep_cmd = ""
+    while grep_cmd.replace(" ", "") != 'grep "hello" ./spell_book.txt'.replace(" ", ""):
+        grep_cmd = input("What would you type? ")
+
+    print("\n\n\n")
+    print("Excellent!")
+    print('One pattern I know will be quite helpful is "Tab Complete"')
     print('Search for it in the spell book by doing `grep "Tab Complete" ./spell_book.txt`')
-    time.sleep(5)
+    time.sleep(15)
     print("Once you're done defeating both monsters, come see me for your prize!")
     time.sleep(5)
     print("Good luck Harry!")
-
-
-def run_dumbledore_so_close() -> None:
-    print(DUMBLEDORE)
-    time.sleep(1)
-    print("Harry, you're so close! Just one more trial to go!!!")
+    time.sleep(3)
 
 
 def run_dumbledore_outro() -> None:
     print(DUMBLEDORE)
-    time.sleep(1)
+    time.sleep(3)
     print("Harry!!! I knew you could do it!")
-    time.sleep(2)
+    time.sleep(3)
     print("Now it's time to claim your prize")
-    time.sleep(2)
+    time.sleep(3)
     print("Open up a new terminal (Application/Utilities/Terminal) and run `say I won give me candy Mr Rizzi`")
+    time.sleep(3)
+
+
+def run_dumbledore_so_close() -> None:
+    print(DUMBLEDORE)
+    time.sleep(3)
+    print("Harry, you're so close! Just one more trial to go!!!")
+    time.sleep(3)
 
 
 if __name__ == "__main__":
@@ -102,7 +116,7 @@ if __name__ == "__main__":
 
     if monster_1_alive and not monster_2_alive:
         run_dumbledore_intro()
-    if monster_1_alive or not monster_2_alive:
+    elif monster_1_alive or not monster_2_alive:
         run_dumbledore_so_close()
     else:
         run_dumbledore_outro()

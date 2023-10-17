@@ -50,7 +50,7 @@ HAGRID = """
 
 def run_hagrid() -> None:
     print(HAGRID)
-    time.sleep(1)
+    time.sleep(3)
     print("Harry, is that you? Can't be too careful!")
     time.sleep(3)
     print("Answer this question that only you would know...")
@@ -72,7 +72,7 @@ def run_hagrid() -> None:
     print("a new spell: `ls -al`. It's like 'revelio' (lumos on steroids) and")
     print("will show you hidden objects.")
     print("\n\n\n")
-    time.sleep(3)
+    time.sleep(10)
 
     print("Let's try it now!")
     ls_al = ""
@@ -80,7 +80,7 @@ def run_hagrid() -> None:
         ls_al = input("What's the new spell: ")
 
     print("\n\n\n")
-    time.sleep(4)
+    time.sleep(1)
     print("You got it! Now look at all the new stuff you can see in this directory:")
     print("drwxr-xr-x 4 root  root   128 Oct 14 15:15 .")
     print("drwxr-xr-x 1 root  root  4096 Oct 14 14:42 ..")
@@ -88,11 +88,15 @@ def run_hagrid() -> None:
     print("-rwxrwxr-x 1 harry harry 4919 Oct 14 15:15 hagrid")
     print("\n\n\n")
     time.sleep(.5)
-    print("Look at that! A shiny gold coin!")
+    print("Look at that! A shiny gold coin that was hiding!")
     time.sleep(5)
     print("\n\n\n")
+    print("I'd suggest writing `ls -al` in your spell book for when a directory seems empty")
+    print("\n\n\n")
+    time.sleep(15)
     print("Ok, that's all I have for you. Apparate to Kings Crossing (/kings_cross)")
     print("and go save Hogwarts!")
+    time.sleep(5)
 
 
 if __name__ == "__main__":

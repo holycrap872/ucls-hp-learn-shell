@@ -42,7 +42,8 @@ CONDUCTOR = """
 """
 
 def question_correct(question: str, answer: str) -> bool:
-    time.sleep(1)
+    time.sleep(3)
+    print("\n\n\n")
     print("Q: " + question)
     print("\n")
 
@@ -69,10 +70,10 @@ def question_three_correct() -> bool:
 
 def run_conductor() -> None:
     print(CONDUCTOR)
-    time.sleep(1)
+    time.sleep(3)
     print("Trying to get on the train without paying???")
-    time.sleep(1)
-    print("You're going to have to earn your way on")
+    time.sleep(3)
+    print("You're going to have to earn your way on by answering me these questions three")
 
     if not question_one_correct():
         return
@@ -86,6 +87,7 @@ def run_conductor() -> None:
     print("\n\n\n")
     print("Ok, I guess you earned your way. You can get on the train to hogwarts")
     print("Execute the spell `sl` and good luck!")
+    time.sleep(5)
 
 
 if __name__ == "__main__":
