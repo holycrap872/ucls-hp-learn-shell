@@ -1,8 +1,17 @@
-To kill this monster, you need to use a secret spell. The spell has been encoded
-using a **caesar cipher** meaning that the letters of the original message have
-been rotated!
+To kill this monster, you need to use a secret spell. Unfortunately, the exact
+spell you need has been encoded using a **caesar cipher**. This means that the
+letters of spell have been rotated.
 
-For example, rotating the word "hello" once results in "ifmmp".
+For example, rotating the word "hello", rotation the word X times results in:
+
+```
+0: "hello"
+1: "ifmmp"
+2: "jgnnq"
+3: "khoor"
+...
+26: "hello"
+```
 
 Use the `rotate` spell to decode the message below and slay the monster:
 
@@ -11,3 +20,4 @@ Kyv jgvcc kyrk pfl evvu kf ivdfmv kyv dfejkvi zj id
 ```
 
 Hint: The first letter of the message is a "T"
+
