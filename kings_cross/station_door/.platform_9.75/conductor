@@ -1,5 +1,7 @@
 #!/bin/python3
 import time
+import typing
+
 
 CONDUCTOR = """
           @@@@@@@@@@@@@@@@@@@@@@@@@
@@ -41,7 +43,7 @@ CONDUCTOR = """
          @@@@@@@@@@@@@@@@@@@@@@@@@@
 """
 
-def question_correct(question: str, answer: str) -> bool:
+def text_question_correct(question: str, answer: str) -> bool:
     time.sleep(3)
     print("\n\n\n")
     print("Q: " + question)
@@ -52,20 +54,60 @@ def question_correct(question: str, answer: str) -> bool:
         print("Impressive!")
         return True
     else:
-        print("Your professors should be ashamed")
+        print("Your professors should be ashamed!")
+        return False
+
+
+def choice_question_correct(question: str, options: typing.Dict[str, str], answer: str) -> bool:
+    time.sleep(3)
+    print("\n\n\n")
+    print("Q: " + question)
+    for option in sorted(options):
+        question = options[option]
+        print("   {}: {}".format(option, question))
+    print("\n")
+
+    response = input("Your answer: ")
+    if response.lower() == answer.lower():
+        print("Impressive!")
+        return True
+    else:
+        print("Your professors should be ashamed!")
         return False
 
 
 def question_one_correct() -> bool:
-    return question_correct("What color are directories?", "blue")
+    return text_question_correct("What color are directories?", "blue")
 
 
 def question_two_correct() -> bool:
-    return question_correct("What color are files?", "white")
+    return text_question_correct("What color are programs?", "green")
 
 
 def question_three_correct() -> bool:
-    return question_correct("What color are programs?", "green")
+    return choice_question_correct(
+        "What is the general format of a spell?",
+        {
+            "A": "OPTIONAL_FILE SPACE COMMAND (e.g., `./note.txt cat` and `ls`)",
+            "B": "COMMAND NO_SPACE OPTIONAL_FILE (e.g., `cat./note.txt` and `ls`)",
+            "C": "COMMAND SPACE OPTIONAL_FILE (e.g., `cat ./note.txt` and `ls`)",
+            "D": "COMMAND SPACE ALWAYS_FILE (e.g., `cat ./note.txt` and `ls ./note.txt`)",
+        },
+        "C",
+    )
+
+
+def question_four_correct() -> bool:
+    return choice_question_correct(
+        "When do you need to put a `./` in front of something?",
+        {
+            "A": "When you're lonely",
+            "B": "When the thing you want to interact with is in the same dir as you",
+            "C": "When you want to go back to the beginning",
+            "D": "When you have run out of options",
+        },
+        "B",
+    )
 
 
 def run_conductor() -> None:
@@ -73,7 +115,7 @@ def run_conductor() -> None:
     time.sleep(3)
     print("Trying to get on the train without paying???")
     time.sleep(3)
-    print("You're going to have to earn your way on by answering me these questions three")
+    print("You're going to have to earn your way on by answering me these questions four")
 
     if not question_one_correct():
         return
@@ -82,6 +124,9 @@ def run_conductor() -> None:
         return
 
     if not question_three_correct():
+        return
+
+    if not question_four_correct():
         return
 
     print("\n\n\n")
