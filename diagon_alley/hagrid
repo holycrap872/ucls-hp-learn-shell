@@ -74,10 +74,13 @@ def run_hagrid() -> None:
     print("\n\n\n")
     time.sleep(10)
 
+    print("Notice that there is a SPACE between the spell (command) and what follows")
+    time.sleep(3)
+
     print("Let's try it now!")
-    ls_al = ""
+    ls_al = input("What's the new spell: ")
     while ls_al != "ls -al":
-        ls_al = input("What's the new spell: ")
+        ls_al = input("Not quite.... let's try that again: ")
 
     print("\n\n\n")
     time.sleep(1)
@@ -92,9 +95,10 @@ def run_hagrid() -> None:
     time.sleep(5)
     print("\n\n\n")
     print("I'd suggest writing `ls -al` in your spell book for when a directory seems empty")
+    print("even after you us `ls`.")
     print("\n\n\n")
     time.sleep(15)
-    print("Ok, that's all I have for you. Apparate to Kings Crossing (/kings_cross)")
+    print("Ok, that's all I have for you. Apparate to Kings Crossing (`/kings_cross`)")
     print("and go save Hogwarts!")
     time.sleep(5)
 

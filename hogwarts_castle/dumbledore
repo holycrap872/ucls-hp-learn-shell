@@ -77,9 +77,9 @@ def run_dumbledore_intro() -> None:
     time.sleep(3)
     print("Let's say you want to find all instances of \"hello\" in ./spell_book.txt")
     time.sleep(3)
-    grep_cmd = ""
-    while grep_cmd.replace(" ", "") != 'grep "hello" ./spell_book.txt'.replace(" ", ""):
-        grep_cmd = input("What would you type? ")
+    grep_cmd = input("What would you type? ")
+    while grep_cmd != 'grep "hello" ./spell_book.txt':
+        grep_cmd = input("Not quite.... let's try that again: ")
 
     print("\n\n\n")
     print("Excellent!")
