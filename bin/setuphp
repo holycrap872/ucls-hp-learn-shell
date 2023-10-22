@@ -2,6 +2,7 @@
 import json
 import os
 import subprocess
+import typing
 
 
 MORSE_DICT = {
@@ -62,19 +63,25 @@ def do_dewey_code(output_file: str, dewey_code: str) -> None:
         output_fp.write("\n\n\n")
 
 
-def do_final_clue(output_file: str, program: str) -> None:
+def do_final_clue(output_file: str, program: typing.List[str]) -> None:
     with open(output_file, "w") as output_fp:
-        output_fp.write(program)
+        for loc in program:
+            output_fp.write(loc)
+            output_fp.write("\n")
         output_fp.write("\n\n\n")
 
 
 def setup_harry_potter() -> None:
+    MIN_CLUES = 8
     index = int(os.environ.get("IDENTIFIER", "0"))
 
-    # Morse modifier
+    # Load and validate data
     with open("/metadata/metadata.json", "r") as md_fp:
         json_dict = json.load(md_fp)
+    for clue_index in range(1, 4):
+        assert len(json_dict[str(clue_index)]["clues"]) >= MIN_CLUES, clue_index
 
+    # Morse modifier
     phrase = json_dict["1"]["clues"][index]
     do_morse_code("/home/harry/door/dear_harry.txt", phrase)
 
@@ -84,6 +91,7 @@ def setup_harry_potter() -> None:
 
     # Program point 
     program = json_dict["3"]["clues"][index]
+    assert len(program) > 5, program
     do_final_clue("/var/hogwarts_castle/front_door/.under_rock.txt", program)
 
 

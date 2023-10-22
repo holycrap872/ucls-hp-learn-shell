@@ -4,28 +4,36 @@
         "clues": [
             "Under instructors desk",
             "In copy room across hall under table",
-            "Under my chair in CS department",
-            "Under lego robotics table",
-            "In C216 printer",
-            "Back of post in C216",
-            "Above C216 sign",
-            "In copy room across hall in box of paper",
+            "In copy room across hall behind door",
             "Rolled up on whiteboard in CS dept",
-            "Empty locker"
+            "Behind door in CS department",
+            "Under lego robotics table",
+            "In C216 copier",
+            "In blue bin under mr rizzis desk",
+            "Behind post in C216"
         ],
         "yields": "terminal_opener.docx"
     },
     "2": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
-            "XXXX.X.XX"
+            "XXXX.X.XX",
+            "YYYY.Y.YY"
         ],
         "yields": "terminal_maze.docx"
     },
     "3": {
         "description": "Directions to get to particular lockers/spots with hidden lock boxes",
         "clues": [
-            "various innocuous club signs that have hidden stuff on back"
+            [
+                "variable x = 5",
+                "go to east door of 216",
+                "take two steps out",
+                "if (x * 2 == 10) turn right ELSE turn left",
+                "repeat (x times) pass 5 lockers",
+                "turn right",
+                "turn paper around"
+            ]
         ],
         "yields": "terminal_monsters.docx"
     }
