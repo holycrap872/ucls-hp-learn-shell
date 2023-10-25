@@ -97,7 +97,7 @@ def run_hagrid() -> None:
     time.sleep(5)
     print("\n\n\n")
     print("I'd suggest writing `ls -al` in your spell book for when a directory seems empty")
-    print("even after you us `ls`.")
+    print("even after you use `ls`.")
     print("\n\n\n")
     time.sleep(15)
     print("Ok, that's all I have for you. Apparate to Kings Crossing (`/kings_cross`)")
