@@ -18,16 +18,16 @@
     "1": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
-            "0000.X.XX",
-            "1111.Y.YY",
-            "2222.Y.YY",
-            "3333.Y.YY",
-            "4444.Y.YY",
-            "5555.Y.YY",
-            "6666.Y.YY",
-            "7777.Y.YY",
-            "8888.Y.YY",
-            "9999.Y.YY"
+            "                    0000.X.XX",
+            "                    1111.Y.YY",
+            "                    2222.Y.YY",
+            "                    3333.Y.YY",
+            "                    4444.Y.YY",
+            "                    5555.Y.YY",
+            "                    6666.Y.YY",
+            "                    7777.Y.YY",
+            "                    8888.Y.YY",
+            "                    9999.Y.YY"
         ],
         "yields": "01_terminal_maze.docx"
     },
