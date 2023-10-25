@@ -5,13 +5,13 @@
             "Under instructors desk",
             "In copy room across hall under table",
             "In copy room across hall behind door",
-            "In copy room across hall behind door",
             "Rolled up on whiteboard in CS dept",
             "Behind door in CS department",
             "Under lego robotics table",
-            "In copery machine",
+            "In copier machine",
             "Blue bin under mr rizzis desk",
-            "Behind column in C216"
+            "Behind column in C216",
+            "In copy room across hall behind door"
         ],
         "yields": "00_terminal_opener.docx"
     },
