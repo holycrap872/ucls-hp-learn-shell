@@ -63,36 +63,50 @@ def do_dewey_code(output_file: str, dewey_code: str) -> None:
         output_fp.write("\n\n\n")
 
 
-def do_final_clue(output_file: str, program: typing.List[str]) -> None:
+def do_final_clue(output_file: str, program: typing.List[str], sign: str) -> None:
     with open(output_file, "w") as output_fp:
+        output_fp.write(f'Run the following program:')
+        output_fp.write(f'\n\n')
+        output_fp.write(f'```')
+
         for loc in program:
             output_fp.write(loc)
             output_fp.write("\n")
+
+        output_fp.write(f'turn over the "{sign}" sign')
+        output_fp.write(f'\n')
+        output_fp.write(f'```')
         output_fp.write("\n\n\n")
 
 
 def setup_harry_potter() -> None:
-    MIN_CLUES = 8
+    MIN_CLUES = 10
     index = int(os.environ.get("IDENTIFIER", "0"))
 
     # Load and validate data
     with open("/metadata/metadata.json", "r") as md_fp:
         json_dict = json.load(md_fp)
-    for clue_index in range(1, 4):
+    for clue_index in range(0, 2):
         assert len(json_dict[str(clue_index)]["clues"]) >= MIN_CLUES, clue_index
 
     # Morse modifier
-    phrase = json_dict["1"]["clues"][index]
-    do_morse_code("/home/harry/door/dear_harry.txt", phrase)
+    phrase = json_dict["0"]["clues"][index]
+    do_morse_code("/home/harry/bedroom_door/front_door/dear_harry.txt", phrase)
 
     # Dewey dump
-    dewey_code = json_dict["2"]["clues"][index]
+    dewey_code = json_dict["1"]["clues"][index]
     do_dewey_code("/hogwarts/crumpled_piece_of_paper.txt", dewey_code)
 
     # Program point 
-    program = json_dict["3"]["clues"][index]
-    assert len(program) > 5, program
-    do_final_clue("/var/hogwarts_castle/front_door/.under_rock.txt", program)
+    program_index = int(index / len(json_dict["2"]["signs"]))
+    sign_index = int(index % len(json_dict["2"]["signs"]))
+
+    program = json_dict["2"]["clues"][program_index]
+    sign = json_dict["2"]["signs"][sign_index]
+    assert isinstance(program, list) and len(program) > 5, program
+    assert isinstance(sign, str) and len(sign) > 5
+
+    do_final_clue("/var/hogwarts_castle/front_door/.under_rock.txt", program, sign)
 
 
 if __name__ == "__main__":

@@ -1,40 +1,94 @@
 {
-    "1": {
+    "0": {
         "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
             "Under instructors desk",
             "In copy room across hall under table",
             "In copy room across hall behind door",
+            "In copy room across hall behind door",
             "Rolled up on whiteboard in CS dept",
             "Behind door in CS department",
             "Under lego robotics table",
-            "In C216 copier",
-            "In blue bin under mr rizzis desk",
-            "Behind post in C216"
+            "In copery machine",
+            "Blue bin under mr rizzis desk",
+            "Behind column in C216"
         ],
-        "yields": "terminal_opener.docx"
+        "yields": "00_terminal_opener.docx"
     },
-    "2": {
+    "1": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
-            "XXXX.X.XX",
-            "YYYY.Y.YY"
+            "0000.X.XX",
+            "1111.Y.YY",
+            "2222.Y.YY",
+            "3333.Y.YY",
+            "4444.Y.YY",
+            "5555.Y.YY",
+            "6666.Y.YY",
+            "7777.Y.YY",
+            "8888.Y.YY",
+            "9999.Y.YY"
         ],
-        "yields": "terminal_maze.docx"
+        "yields": "01_terminal_maze.docx"
     },
-    "3": {
+    "2": {
         "description": "Directions to get to particular lockers/spots with hidden lock boxes",
+        "clues location": [
+            "Behind C212c door",
+            "Between 2179-2180",
+            "Stairwell outside 212B",
+            "Pig mural in middle school foyer"
+        ],
         "clues": [
             [
-                "variable x = 5",
-                "go to east door of 216",
-                "take two steps out",
-                "if (x * 2 == 10) turn right ELSE turn left",
-                "repeat (x times) pass 5 lockers",
-                "turn right",
-                "turn paper around"
+                "set variable x = 3",
+                "go to west door of 216",
+                "take three steps into hallway",
+                "turn 90 degrees left",
+                "repeat (7 times) move down x lockers on your left",
+                "take two steps",
+                "look behind door"
+            ],
+            [
+                "set variable x = 10",
+                "go to west door of 216",
+                "take five steps into hallway",
+                "turn 90 degrees right",
+                "repeat (3 times) move down x lockers on your left",
+                "turn 90 degrees right",
+                "take two big steps",
+                "turn 90 degrees right",
+                "move down four lockers on the left",
+                "turn 90 degrees left"
+            ],
+            [
+                "set variable x = 4",
+                "go to west door of 216",
+                "take two steps into hallway",
+                "turn 90 degrees left",
+                "repeat (x times) walk past stripe on floor",
+                "turn 90 degrees right",
+                "take 4 big steps",
+                "turn 90 degrees left",
+                "take 2 steps forward"
+            ],
+            [
+                "set variable x = 2",
+                "go to west door of 216",
+                "take three steps into hallway",
+                "turn 90 degrees right",
+                "repeat (x times) walk past exit sign",
+                "take 2 steps",
+                "turn 90 degrees right",
+                "take 2 steps"
             ]
         ],
-        "yields": "terminal_monsters.docx"
+        "signs": [
+            "Vote for Megan",
+            "Join Computer Club",
+            "Walking Club"
+
+        ],
+        "yields": "02_terminal_monsters.docx"
     }
 }
