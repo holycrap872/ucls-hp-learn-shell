@@ -68,6 +68,7 @@ def do_final_clue(output_file: str, program: typing.List[str], sign: str) -> Non
         output_fp.write(f'Run the following program:')
         output_fp.write(f'\n\n')
         output_fp.write(f'```')
+        output_fp.write(f'\n')
 
         for loc in program:
             output_fp.write(loc)
