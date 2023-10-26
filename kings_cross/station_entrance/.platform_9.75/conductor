@@ -81,30 +81,28 @@ def question_one_correct() -> bool:
 
 
 def question_two_correct() -> bool:
-    return text_question_correct("What color are programs?", "green")
-
-
-def question_three_correct() -> bool:
     return choice_question_correct(
         "What is the general format of a spell?",
         {
             "A": "OPTIONAL_FILE SPACE COMMAND (e.g., `./note.txt cat` and `ls`)",
             "B": "COMMAND NO_SPACE OPTIONAL_FILE (e.g., `cat./note.txt` and `ls`)",
             "C": "COMMAND SPACE OPTIONAL_FILE (e.g., `cat ./note.txt` and `ls`)",
-            "D": "COMMAND SPACE ALWAYS_FILE (e.g., `cat ./note.txt` and `ls ./note.txt`)",
         },
         "C",
     )
 
 
+def question_three_correct() -> bool:
+    return text_question_correct("What color are programs?", "green")
+
+
 def question_four_correct() -> bool:
     return choice_question_correct(
-        "When do you need to put a `./` in front of something?",
+        "When do you need to put a `/` in front of something?",
         {
             "A": "When you're lonely",
-            "B": "When the thing you want to interact with is in the same dir as you",
-            "C": "When you want to go back to the beginning",
-            "D": "When you have run out of options",
+            "B": "When you're giving the full path to a file",
+            "C": "When you only know a little bit of the path",
         },
         "B",
     )
@@ -115,7 +113,7 @@ def run_conductor() -> None:
     time.sleep(3)
     print("Trying to get on the train without paying???")
     time.sleep(3)
-    print("You're going to have to earn your way on by answering me these questions four")
+    print("You're going to have to earn your way on by answering me these four questions")
 
     if not question_one_correct():
         return
