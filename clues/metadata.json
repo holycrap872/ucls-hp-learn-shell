@@ -18,15 +18,15 @@
     "1": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
-            "                    0000.X.XX",
-            "                    1111.Y.YY",
-            "                    2222.Y.YY",
-            "                    3333.Y.YY",
-            "                    4444.Y.YY",
-            "                    5555.Y.YY",
-            "                    6666.Y.YY",
-            "                    7777.Y.YY",
-            "                    8888.Y.YY",
+            "                    324.973 S34c",
+            "                    277.26 M49w",
+            "                    305.896 R32w",
+            "                    232.08 P94r",
+            "                    133.9 A57a",
+            "                    190 M19s",
+            "                    320.51 S57i",
+            "                    305.8 T31r",
+            "                    301.364 A21e",
             "                    9999.Y.YY"
         ],
         "yields": "01_terminal_maze.docx"
@@ -37,13 +37,13 @@
             "Behind C212c door",
             "Between 2179-2180",
             "Stairwell outside 212B",
-            "Pig mural in middle school foyer"
+            "Middle school foyer to right of tree mural"
         ],
         "clues": [
             [
                 "set variable x = 3",
-                "go to west door of 216",
-                "take three steps into hallway",
+                "go to west door of C216",
+                "take two steps into hallway",
                 "turn 90 degrees left",
                 "repeat (7 times) move down x lockers on your left",
                 "take two steps",
@@ -51,7 +51,7 @@
             ],
             [
                 "set variable x = 10",
-                "go to west door of 216",
+                "go to west door of C216",
                 "take five steps into hallway",
                 "turn 90 degrees right",
                 "repeat (3 times) move down x lockers on your left",
@@ -63,9 +63,10 @@
             ],
             [
                 "set variable x = 4",
-                "go to west door of 216",
+                "go to west door of C216",
                 "take two steps into hallway",
                 "turn 90 degrees left",
+                "take two steps forward",
                 "repeat (x times) walk past stripe on floor",
                 "turn 90 degrees right",
                 "take 4 big steps",
@@ -74,13 +75,14 @@
             ],
             [
                 "set variable x = 2",
-                "go to west door of 216",
+                "go to west door of C216",
                 "take three steps into hallway",
                 "turn 90 degrees right",
                 "repeat (x times) walk past exit sign",
                 "take 2 steps",
-                "turn 90 degrees right",
-                "take 2 steps"
+                "turn 90 degrees left",
+                "take 3 steps",
+                "turn 90 degrees left"
             ]
         ],
         "signs": [
