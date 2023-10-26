@@ -8,7 +8,7 @@
             "Rolled up on whiteboard in CS dept",
             "Behind door in CS department",
             "Under lego robotics table",
-            "In copier machine",
+            "In C216 copier machine",
             "Blue bin under mr rizzis desk",
             "Behind column in C216",
             "In copy room across hall behind door"
@@ -18,16 +18,16 @@
     "1": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
-            "                    324.973 S34c",
-            "                    277.26 M49w",
-            "                    305.896 R32w",
-            "                    232.08 P94r",
-            "                    133.9 A57a",
-            "                    190 M19s",
-            "                    320.51 S57i",
-            "                    305.8 T31r",
-            "                    301.364 A21e",
-            "                    9999.Y.YY"
+            "                    342.74 CRO",
+            "                    345.761 BRI",
+            "                    346.08 RAW",
+            "                    591.77 VOG",
+            "                    597.31 MAC",
+            "                    332.64 GEI",
+            "                    330.15 BEC",
+            "                    364.66 KER",
+            "                    395.123 PAC",
+            "                    398.2 ZHA"
         ],
         "yields": "01_terminal_maze.docx"
     },
