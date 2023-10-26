@@ -1036,8 +1036,8 @@ Glisseo (Sliding Spell)
     Seen/Mentioned: Taught in Defence Against the Dark Arts; When Hagrid, Harry and Her mione try to find an injured unicorn, Hagrid says that if it is found, they must send up green sparks.
     Notes: The incantation is almost certainly Verdimillious.
 
-(grep): Finds patterns/phrases is big files. Works by doing `grep "PATTERN" ./FILE`
-(Grep): Finds patterns/phrases is big files. Works by doing `grep "PATTERN" ./FILE`
+(grep): Finds patterns/phrases is big files. Works by doing `grep "PATTERN" FILE`
+(Grep): Finds patterns/phrases is big files. Works by doing `grep "PATTERN" FILE`
 
 (Gripping Char m)
 
@@ -1870,8 +1870,8 @@ Neville Riddikulus
     Etymology: Latin word ridiculus, "laughable" (but perhaps "absurd" or "silly" in this context).
     Notes: The effect of the spell seems to rely primarily on the state of mind of the caster. It doesn't actually change the shape of a boggart into something humorous, but rather whatever the caster is concentrating on at the moment of the casting, as when Neville was thinking of his grandmother's dress. Presumably, Mrs Weasley couldn't take her mind off of her fears for her family, so the Boggart was changed into other members of the family rather than something humorous.
 
-(rm): Remove a character (or a directory/file/program). For example `rm ./monster.txt` (see avada kadavra)
-(Rm): Remove a character (or a directory/file/program). For example `rm ./monster.txt` (see avada kadavra)
+(rm): Remove a character (or a directory/file/program). For example `rm monster.txt` (see avada kadavra)
+(Rm): Remove a character (or a directory/file/program). For example `rm monster.txt` (see avada kadavra)
 
 (Rose Growth)
 Rose Growth
