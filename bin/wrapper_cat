@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Loop through all arguments
+for file in "$@"; do
+  # Read the first line of the file
+  first_line=$(head -n 1 "$file")
+
+  # Check if the first line contains the string "python"
+  if [[ "$first_line" == *"python"* ]]; then
+    echo "Error: Refusing to read program '$file'"
+
+  else
+    # Use cat to display the file content
+    cat "$file"
+  fi
+done
+
