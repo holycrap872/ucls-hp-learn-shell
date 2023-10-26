@@ -98,14 +98,14 @@ def question_three_correct() -> bool:
 
 def question_four_correct() -> bool:
     return choice_question_correct(
-        "How do you apparate home?",
+        "How would you apparate to hogsmeade?",
         {
-            "A": "cd ~",
-            "B": "cd~",
-            "C": "cd ./",
-            "D": "cd/",
+            "A": "cd hogsmeade",
+            "B": "cd ./hogsmeade",
+            "C": "cd ..",
+            "D": "cd /hogsmeade",
         },
-        "A",
+        "D",
     )
 
 
