@@ -77,16 +77,16 @@ def choice_question_correct(question: str, options: typing.Dict[str, str], answe
 
 
 def question_one_correct() -> bool:
-    return text_question_correct("What color are directories?", "blue")
+    return text_question_correct("What color are directories/folders?", "blue")
 
 
 def question_two_correct() -> bool:
     return choice_question_correct(
-        "What is the general format of a spell?",
+        "What is the correct way to cast the `cat` spell?",
         {
-            "A": "OPTIONAL_FILE SPACE COMMAND (e.g., `./note.txt cat` and `ls`)",
-            "B": "COMMAND NO_SPACE OPTIONAL_FILE (e.g., `cat./note.txt` and `ls`)",
-            "C": "COMMAND SPACE OPTIONAL_FILE (e.g., `cat ./note.txt` and `ls`)",
+            "A": "`./note.txt cat`",
+            "B": "`cat./note.txt` (i.e. no space between `cat` and the file)",
+            "C": "`cat ./note.txt` (i.e. space between `cat` and the file)",
         },
         "C",
     )
@@ -98,13 +98,14 @@ def question_three_correct() -> bool:
 
 def question_four_correct() -> bool:
     return choice_question_correct(
-        "When do you need to put a `/` in front of something?",
+        "How do you apparate home?",
         {
-            "A": "When you're lonely",
-            "B": "When you're giving the full path to a file",
-            "C": "When you only know a little bit of the path",
+            "A": "cd ~",
+            "B": "cd~",
+            "C": "cd ./",
+            "D": "cd/",
         },
-        "B",
+        "A",
     )
 
 
