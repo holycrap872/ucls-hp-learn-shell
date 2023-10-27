@@ -2,16 +2,17 @@
     "0": {
         "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
-            "Under instructors desk",
+            "Blue bin under mr rizzis desk",
             "In copy room across hall under table",
             "In copy room across hall behind door",
+            "In copy room across hall behind door",
+            "Behind trash can in CS dept",
             "Rolled up on whiteboard in CS dept",
             "Behind door in CS department",
-            "Under lego robotics table",
             "In C216 copier machine",
-            "Blue bin under mr rizzis desk",
             "Behind column in C216",
-            "In copy room across hall behind door"
+            "Under instructors desk",
+            "Under lego robotics table"
         ],
         "yields": "00_terminal_opener.docx"
     },
@@ -27,7 +28,8 @@
             "                    330.15 BEC",
             "                    364.66 KER",
             "                    395.123 PAC",
-            "                    398.2 ZHA"
+            "                    398.2 ZHA",
+            "                    598.97 WIL"
         ],
         "yields": "01_terminal_maze.docx"
     },
