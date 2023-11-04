@@ -70,7 +70,7 @@ def run_hagrid() -> None:
 
     print("\n\n\n")
     print("Phew, it's you! Hogwarts is in danger. First, you're going to need")
-    print("a new spell: `ls -al`. It's like 'revelio' (lumos on steroids) and")
+    print("""a new spell: `ls -al`. It's like "revelio" (lumos on steroids) and""")
     print("will show you hidden objects.")
     print("\n\n\n")
     time.sleep(10)
@@ -107,4 +107,3 @@ def run_hagrid() -> None:
 
 if __name__ == "__main__":
     run_hagrid()
-
