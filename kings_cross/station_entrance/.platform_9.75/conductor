@@ -114,7 +114,7 @@ def run_conductor() -> None:
     time.sleep(3)
     print("Trying to get on the train without paying???")
     time.sleep(3)
-    print("You're going to have to earn your way on by answering me these four questions")
+    print("You're going to have to earn your way on by answering these four questions")
 
     if not question_one_correct():
         return

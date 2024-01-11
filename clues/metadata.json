@@ -3,16 +3,16 @@
         "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
             "Blue bin under mr rizzis desk",
-            "In copy room across hall under table",
-            "In copy room across hall behind door",
-            "In copy room across hall behind door",
+            "In C200 copy room under table",
+            "In C200 copy room behind door",
+            "In C200 copy room behind door",
             "Behind trash can in CS dept",
-            "Rolled up on whiteboard in CS dept",
+            "On whiteboard in CS dept",
             "Behind door in CS department",
-            "In C216 copier machine",
-            "Behind column in C216",
+            "In C224 copier machine",
+            "Behind C224 door",
             "Under instructors desk",
-            "Under lego robotics table"
+            "Under trash outside C224"
         ],
         "yields": "00_terminal_opener.docx"
     },
@@ -34,7 +34,7 @@
         "yields": "01_terminal_maze.docx"
     },
     "2": {
-        "description": "Directions to get to particular lockers/spots with hidden lock boxes",
+        "description": "Directions to get to particular lockers/spots with picture clues",
         "clues location": [
             "Behind C212c door",
             "Between 2179-2180",
@@ -43,47 +43,45 @@
         ],
         "clues": [
             [
-                "set variable x = 3",
-                "go to west door of C216",
-                "take two steps into hallway",
+                "set variable x = 9",
+                "go to door of C224",
+                "take three steps into hallway",
                 "turn 90 degrees left",
-                "repeat (7 times) move down x lockers on your left",
-                "take two steps",
+                "repeat (x times) walk past white stripe on floor",
+                "take three steps",
+                "turn 90 degrees left",
+                "take two steps forward",
                 "look behind door"
             ],
             [
-                "set variable x = 10",
-                "go to west door of C216",
-                "take five steps into hallway",
-                "turn 90 degrees right",
-                "repeat (3 times) move down x lockers on your left",
-                "turn 90 degrees right",
-                "take two big steps",
-                "turn 90 degrees right",
-                "move down four lockers on the left",
+                "set variable x = 4",
+                "go to door of C224",
+                "take three steps into hallway",
+                "turn 90 degrees left",
+                "repeat (x times) walk past white stripe on floor",
+                "take one big step",
                 "turn 90 degrees left"
             ],
             [
-                "set variable x = 4",
-                "go to west door of C216",
-                "take two steps into hallway",
+                "set variable x = 11",
+                "go to door of C224",
+                "take three steps into hallway",
                 "turn 90 degrees left",
-                "take two steps forward",
-                "repeat (x times) walk past stripe on floor",
+                "repeat (x times) walk past white stripe on floor",
                 "turn 90 degrees right",
-                "take 4 big steps",
+                "take four big steps",
                 "turn 90 degrees left",
-                "take 2 steps forward"
+                "take two steps forward"
             ],
             [
-                "set variable x = 2",
-                "go to west door of C216",
+                "set variable x = 4",
+                "go to door of C224",
                 "take three steps into hallway",
                 "turn 90 degrees right",
-                "repeat (x times) walk past exit sign",
-                "take 2 steps",
+                "repeat (x times) walk past white stripe on floor",
+                "take x big steps",
                 "turn 90 degrees left",
-                "take 3 steps",
+                "take three steps",
                 "turn 90 degrees left"
             ]
         ],
