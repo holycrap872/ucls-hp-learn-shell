@@ -51,6 +51,13 @@ DOBBY = """
 """
 
 
+class bcolors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    BOLD = '\033[1m'
+    ENDC = '\033[0m'
+
+
 def run_ls_demo() -> None:
     print("\n\n\n")
     print("One of the most important spells you need to know is `ls` (or lumos).")
@@ -60,7 +67,7 @@ def run_ls_demo() -> None:
     print("Run `ls` when you are in a location and need to see what you can interact with.")
     time.sleep(3)
     print("\n\n")
-    print("Let's say you want to see what files/folders/programs you can interact with.")
+    print(f"Let's say you want to see what {bcolors.BOLD}files{bcolors.ENDC}/{bcolors.BLUE}folders{bcolors.ENDC}/{bcolors.GREEN}programs{bcolors.ENDC} you can interact with.")
     time.sleep(3)
     ls_cmd = input("What would you type? ")
     while ls_cmd != 'ls':
@@ -79,17 +86,17 @@ def run_file_demo() -> None:
     time.sleep(3)
     print("`cat` reads a file so you can know what it says.")
     time.sleep(3)
-    print("Run `cat` when encounter a **white** file and want to read it.")
+    print(f"Run `cat` when encounter a {bcolors.BOLD}white{bcolors.ENDC} file and want to read it.")
     time.sleep(3)
     print("\n\n")
-    print("Let's say you see a **white** file named `hello.txt`")
+    print(f"Let's say you see a {bcolors.BOLD}white{bcolors.ENDC} file named {bcolors.BOLD}hello.txt{bcolors.ENDC}")
     time.sleep(3)
     cat_cmd = input("What would you type to read it? ")
     while cat_cmd != 'cat hello.txt':
         cat_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print("Remember, anytime you see a **white** file, think of your trusy cat.")
+    print(f"Remember, anytime you see a {bcolors.BOLD}white{bcolors.ENDC} file, think of your trusy cat.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -99,17 +106,17 @@ def run_program_demo() -> None:
     print("\n\n\n")
     print("One of the most important things you can do is run programs.")
     time.sleep(3)
-    print("Programs are **green** and you run them by typing `./PROGRAM_NAME`.")
+    print(f"Programs are {bcolors.GREEN}green{bcolors.ENDC} and you run them by typing `./PROGRAM_NAME`.")
     time.sleep(3)
     print("\n\n")
-    print("Let's say you see a **green** program named `fun_game`.")
+    print(f"Let's say you see a {bcolors.GREEN}green{bcolors.ENDC} program named {bcolors.GREEN}fun_game{bcolors.ENDC}.")
     time.sleep(3)
     program_cmd = input("What would you type to run it? ")
     while program_cmd != './fun_game':
         program_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print("Remember, anytime you see a **green** file, think of trying to run it.")
+    print(f"Remember, anytime you see a {bcolors.GREEN}green{bcolors.ENDC} file, think of trying to run it.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -122,17 +129,17 @@ def run_directory_demo() -> None:
     print("`cd` allows your to change your current directory - kind of like")
     print("changing the door to walk into a new room.")
     time.sleep(3)
-    print("Run `cd` when encounter a **blue** folder/directory and want to go into it.")
+    print(f"Run `cd` when encounter a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory and want to go into it.")
     time.sleep(3)
     print("\n\n")
-    print("Let's say you see a **blue** folder named `homework`")
+    print(f"Let's say you see a {bcolors.BLUE}blue{bcolors.ENDC} folder named {bcolors.BLUE}homework{bcolors.ENDC}")
     time.sleep(3)
     cat_cmd = input("What would you type to go into the folder? ")
     while cat_cmd != 'cd homework':
         cat_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print("Remember, anytime you see a **blue** folder/directory, think of `cd`.")
+    print(f"Remember, anytime you see a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory, think of `cd`.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -164,9 +171,9 @@ def run_dobby() -> None:
         print("\n")
         print("Q: What do you need help with:")
         print("   A: What do do first")
-        print("   B: What to do with files (white)")
-        print("   C: What to do with programs (green)")
-        print("   D: What to do with folders/directories (blue)")
+        print(f"   B: What to do with {bcolors.BOLD}files{bcolors.ENDC} (white)")
+        print(f"   C: What to do with {bcolors.GREEN}programs{bcolors.ENDC} (green)")
+        print(f"   D: What to do with {bcolors.BLUE}folders/directories{bcolors.ENDC} (blue)")
         print("   E: I don't need any more help")
         print("\n")
 
