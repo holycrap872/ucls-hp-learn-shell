@@ -170,7 +170,7 @@ def run_dobby() -> None:
         time.sleep(1)
         print("\n")
         print("Q: What do you need help with:")
-        print("   A: What do do first")
+        print("   A: What to do first")
         print(f"   B: What to do with {bcolors.BOLD}files{bcolors.ENDC} (white)")
         print(f"   C: What to do with {bcolors.GREEN}programs{bcolors.ENDC} (green)")
         print(f"   D: What to do with {bcolors.BLUE}folders/directories{bcolors.ENDC} (blue)")
