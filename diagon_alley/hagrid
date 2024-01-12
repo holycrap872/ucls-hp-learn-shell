@@ -48,6 +48,14 @@ HAGRID = """
 .........................:::::::::::::::::::::::::::::::........................
 """
 
+
+class bcolors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    BOLD = '\033[1m'
+    ENDC = '\033[0m'
+
+
 def run_hagrid() -> None:
     print(HAGRID)
     time.sleep(3)
@@ -90,7 +98,7 @@ def run_hagrid() -> None:
     print("drwxr-xr-x 4 root  root   128 Oct 14 15:15 .")
     print("drwxr-xr-x 1 root  root  4096 Oct 14 14:42 ..")
     print("-rw-r--r-- 1 harry harry   22 Oct 14 15:15 .gold_coin_under_bench")
-    print("-rwxrwxr-x 1 harry harry 4919 Oct 14 15:15 hagrid")
+    print(f"-rwxrwxr-x 1 harry harry 4919 Oct 14 15:15 {bcolors.GREEN}hagrid{bcolors.ENDC}")
     print("\n\n\n")
     time.sleep(2)
     print("Look at that! A shiny gold coin that was hiding right next to me!")
@@ -100,7 +108,7 @@ def run_hagrid() -> None:
     print("even after you use `ls`.")
     print("\n\n\n")
     time.sleep(15)
-    print("Ok, that's all I have for you. Apparate to Kings Crossing (`/kings_cross`)")
+    print(f"Ok, that's all I have for you. Apparate to Kings Crossing ({bcolors.BLUE}/kings_cross{bcolors.ENDC})")
     print("and go save Hogwarts!")
     time.sleep(5)
 
