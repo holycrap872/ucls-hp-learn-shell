@@ -2,7 +2,7 @@
     "0": {
         "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
-            "Blue bin under mr rizzis desk",
+            "Blue bin under Mr Rizzis desk",
             "In C200 copy room under table",
             "In C200 copy room behind door",
             "In C200 copy room behind door",
@@ -60,7 +60,8 @@
                 "turn 90 degrees left",
                 "repeat (x times) walk past white stripe on floor",
                 "take one big step",
-                "turn 90 degrees left"
+                "turn 90 degrees left",
+                "take two steps forward"
             ],
             [
                 "set variable x = 11",
