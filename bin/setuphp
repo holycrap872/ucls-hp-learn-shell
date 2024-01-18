@@ -80,14 +80,16 @@ def do_final_clue(output_file: str, program: typing.List[str], sign: str) -> Non
 
 
 def setup_harry_potter() -> None:
-    MIN_CLUES = 10
+    MAX_GROUPS = 11
     index = int(os.environ.get("IDENTIFIER", "0"))
 
     # Load and validate data
     with open("/metadata/metadata.json", "r") as md_fp:
         json_dict = json.load(md_fp)
-    for clue_index in range(0, 2):
-        assert len(json_dict[str(clue_index)]["clues"]) >= MIN_CLUES, clue_index
+
+    assert len(json_dict["0"]["clues"]) >= MAX_GROUPS, "Missing Morse code clue"
+    assert len(json_dict["1"]["clues"]) >= MAX_GROUPS, "Missing Dewey Decimal clue"
+    assert len(json_dict["2"]["clues"]) >= MAX_GROUPS / 3, "Missing human program clue"
 
     # Morse modifier
     phrase = json_dict["0"]["clues"][index]
