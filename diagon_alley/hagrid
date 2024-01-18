@@ -83,7 +83,7 @@ def run_hagrid() -> None:
     print("\n\n\n")
     time.sleep(10)
 
-    print("Notice that there is a SPACE between the spell (command) and what follows")
+    print("Notice that there is a SPACE between the spell (`ls`) and what follows")
     time.sleep(3)
 
     print("Let's try it now!")
@@ -97,7 +97,7 @@ def run_hagrid() -> None:
     time.sleep(2)
     print("drwxr-xr-x 4 root  root   128 Oct 14 15:15 .")
     print("drwxr-xr-x 1 root  root  4096 Oct 14 14:42 ..")
-    print("-rw-r--r-- 1 harry harry   22 Oct 14 15:15 .gold_coin_under_bench")
+    print(f"-rw-r--r-- 1 harry harry   22 Oct 14 15:15 {bcolors.BOLD}.gold_coin_under_bench{bcolors.ENDC}")
     print(f"-rwxrwxr-x 1 harry harry 4919 Oct 14 15:15 {bcolors.GREEN}hagrid{bcolors.ENDC}")
     print("\n\n\n")
     time.sleep(2)
