@@ -53,6 +53,7 @@ class bcolors:
     BLUE = '\033[94m'
     GREEN = '\033[92m'
     BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
     ENDC = '\033[0m'
 
 
@@ -78,12 +79,12 @@ def run_hagrid() -> None:
 
     print("\n\n\n")
     print("Phew, it's you! Hogwarts is in danger. First, you're going to need")
-    print("""a new spell: `ls -al`. It's like "revelio" (lumos on steroids) and""")
+    print(f"""a new spell: {bcolors.UNDERLINE}ls -al{bcolors.ENDC}. It's like "revelio" (lumos on steroids) and""")
     print("will show you hidden objects.")
     print("\n\n\n")
     time.sleep(10)
 
-    print("Notice that there is a SPACE between the spell (`ls`) and what follows")
+    print(f"Notice that there is a SPACE between the spell ({bcolors.UNDERLINE}ls{bcolors.ENDC}) and what follows ({bcolors.UNDERLINE}-al{bcolors.ENDC})")
     time.sleep(3)
 
     print("Let's try it now!")
@@ -104,8 +105,8 @@ def run_hagrid() -> None:
     print("Look at that! A shiny gold coin that was hiding right next to me!")
     time.sleep(5)
     print("\n\n\n")
-    print("I'd STRONGLY suggest writing `ls -al` in your spell book for when")
-    print(" a directory seems empty even after you use `ls`.")
+    print(f"I'd STRONGLY suggest writing {bcolors.UNDERLINE}ls -al{bcolors.ENDC} in your spell book for when")
+    print(f"a directory seems empty even after you use {bcolors.UNDERLINE}ls{bcolors.ENDC}.")
     print("\n\n\n")
     time.sleep(5)
     print("I'm waiting... are your writing?")

@@ -43,6 +43,15 @@ CONDUCTOR = """
          @@@@@@@@@@@@@@@@@@@@@@@@@@
 """
 
+
+class bcolors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    ENDC = '\033[0m'
+
+
 def text_question_correct(question: str, answer: str) -> bool:
     time.sleep(3)
     print("\n\n\n")
@@ -82,11 +91,11 @@ def question_one_correct() -> bool:
 
 def question_two_correct() -> bool:
     return choice_question_correct(
-        "What is the correct way to cast the `cat` spell?",
+        f"What is the correct way to cast the {bcolors.UNDERLINE}cat{bcolors.ENDC} spell?",
         {
-            "A": "`./note.txt cat`",
-            "B": "`cat./note.txt` (i.e. no space between `cat` and the file)",
-            "C": "`cat ./note.txt` (i.e. space between `cat` and the file)",
+            "A": f"{bcolors.UNDERLINE}./note.txt cat{bcolors.ENDC}",
+            "B": f"{bcolors.UNDERLINE}cat./note.txt{bcolors.ENDC} (i.e. no space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
+            "C": f"{bcolors.UNDERLINE}cat ./note.txt{bcolors.ENDC} (i.e. space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
         },
         "C",
     )
@@ -100,10 +109,10 @@ def question_four_correct() -> bool:
     return choice_question_correct(
         "How would you apparate to hogsmeade?",
         {
-            "A": "cd hogsmeade",
-            "B": "cd ./hogsmeade",
-            "C": "cd ..",
-            "D": "cd /hogsmeade",
+            "A": f"{bcolors.UNDERLINE}cd hogsmeade{bcolors.ENDC}",
+            "B": f"{bcolors.UNDERLINE}cd ./hogsmeade{bcolors.ENDC}",
+            "C": f"{bcolors.UNDERLINE}cd ..{bcolors.ENDC}",
+            "D": f"{bcolors.UNDERLINE}cd /hogsmeade{bcolors.ENDC}",
         },
         "D",
     )
@@ -130,7 +139,7 @@ def run_conductor() -> None:
 
     print("\n\n\n")
     print("Ok, I guess you earned your way. You can get on the train to hogwarts")
-    print("Execute the spell `sl` and good luck!")
+    print(f"Execute the spell {bcolors.UNDERLINE}sl{bcolors.ENDC} and good luck!")
     time.sleep(5)
 
 

@@ -55,16 +55,17 @@ class bcolors:
     BLUE = '\033[94m'
     GREEN = '\033[92m'
     BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
     ENDC = '\033[0m'
 
 
 def run_ls_demo() -> None:
     print("\n\n\n")
-    print("One of the most important spells you need to know is `ls` (or lumos).")
+    print(f"One of the most important spells you need to know is {bcolors.UNDERLINE}ls{bcolors.ENDC} (or lumos).")
     time.sleep(3)
-    print("`ls` lights up a room so you can see what's in it.")
+    print(f"{bcolors.UNDERLINE}ls{bcolors.ENDC} lights up a room so you can see what's in it.")
     time.sleep(3)
-    print("Run `ls` when you are in a location and need to see what you can interact with.")
+    print(f"Run {bcolors.UNDERLINE}ls{bcolors.ENDC} when you are in a location and need to see what you can interact with.")
     time.sleep(3)
     print("\n\n")
     print(f"Let's say you want to see what {bcolors.BOLD}files{bcolors.ENDC}/{bcolors.BLUE}folders{bcolors.ENDC}/{bcolors.GREEN}programs{bcolors.ENDC} you can interact with.")
@@ -74,7 +75,7 @@ def run_ls_demo() -> None:
         ls_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print("Don't be shy running `ls`, it can help re-orient you and figure out a room.")
+    print(f"Don't be shy running {bcolors.UNDERLINE}ls{bcolors.ENDC}, it can help re-orient you and figure out a room.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -82,11 +83,11 @@ def run_ls_demo() -> None:
 
 def run_file_demo() -> None:
     print("\n\n\n")
-    print("One of the most important spells you need to know is `cat`.")
+    print(f"One of the most important spells you need to know is {bcolors.UNDERLINE}cat{bcolors.ENDC}.")
     time.sleep(3)
-    print("`cat` reads a file so you can know what it says.")
+    print(f"{bcolors.UNDERLINE}cat{bcolors.ENDC} reads a file so you can know what it says.")
     time.sleep(3)
-    print(f"Run `cat` when encounter a {bcolors.BOLD}white{bcolors.ENDC} file and want to read it.")
+    print(f"Run {bcolors.UNDERLINE}cat{bcolors.ENDC} when encounter a {bcolors.BOLD}white{bcolors.ENDC} file and want to read it.")
     time.sleep(3)
     print("\n\n")
     print(f"Let's say you see a {bcolors.BOLD}white{bcolors.ENDC} file named {bcolors.BOLD}hello.txt{bcolors.ENDC}")
@@ -96,7 +97,7 @@ def run_file_demo() -> None:
         cat_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print(f"Remember, anytime you see a {bcolors.BOLD}white{bcolors.ENDC} file, think of your trusty cat.")
+    print(f"Remember, anytime you see a {bcolors.BOLD}white{bcolors.ENDC} file, think of your trusty {bcolors.UNDERLINE}cat{bcolors.ENDC}.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -106,7 +107,7 @@ def run_program_demo() -> None:
     print("\n\n\n")
     print("One of the most important things you can do is run programs.")
     time.sleep(3)
-    print(f"Programs are {bcolors.GREEN}green{bcolors.ENDC} and you run them by typing `./PROGRAM_NAME`.")
+    print(f"Programs are {bcolors.GREEN}green{bcolors.ENDC} and you run them by typing {bcolors.UNDERLINE}./PROGRAM_NAME{bcolors.ENDC}.")
     time.sleep(3)
     print("\n\n")
     print(f"Let's say you see a {bcolors.GREEN}green{bcolors.ENDC} program named {bcolors.GREEN}fun_game{bcolors.ENDC}.")
@@ -116,7 +117,7 @@ def run_program_demo() -> None:
         program_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print(f"Remember, anytime you see a {bcolors.GREEN}green{bcolors.ENDC} file, think of trying to run it.")
+    print(f"Remember, anytime you see a {bcolors.GREEN}green{bcolors.ENDC} program, think of trying to run it.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
@@ -124,12 +125,12 @@ def run_program_demo() -> None:
 
 def run_directory_demo() -> None:
     print("\n\n\n")
-    print("One of the most important spells you need to know is `cd`.")
+    print(f"One of the most important spells you need to know is {bcolors.UNDERLINE}cd{bcolors.ENDC}.")
     time.sleep(3)
-    print("`cd` allows your to change your current directory - kind of like")
+    print(f"{bcolors.UNDERLINE}cd{bcolors.ENDC} allows your to change your current directory - kind of like")
     print("changing the door to walk into a new room.")
     time.sleep(3)
-    print(f"Run `cd` when encounter a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory and want to go into it.")
+    print(f"Run {bcolors.UNDERLINE}cd{bcolors.ENDC} when encounter a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory and want to go into it.")
     time.sleep(3)
     print("\n\n")
     print(f"Let's say you see a {bcolors.BLUE}blue{bcolors.ENDC} folder named {bcolors.BLUE}homework{bcolors.ENDC}")
@@ -139,7 +140,7 @@ def run_directory_demo() -> None:
         cat_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print(f"Remember, anytime you see a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory, think of `cd`.")
+    print(f"Remember, anytime you see a {bcolors.BLUE}blue{bcolors.ENDC} folder/directory, think of {bcolors.UNDERLINE}cd{bcolors.ENDC}.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
