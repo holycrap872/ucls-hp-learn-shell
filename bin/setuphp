@@ -97,7 +97,7 @@ def setup_harry_potter() -> None:
 
     # Dewey dump
     dewey_code = json_dict["1"]["clues"][index]
-    do_dewey_code("/hogwarts/crumpled_piece_of_paper.txt", dewey_code)
+    do_dewey_code("/hogwarts/crumpled_maze_clue.txt", dewey_code)
 
     # Program point 
     program_index = int(index / len(json_dict["2"]["signs"]))
