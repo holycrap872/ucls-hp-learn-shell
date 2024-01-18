@@ -1,23 +1,33 @@
-To kill this monster, you need to use a secret spell. Unfortunately, the exact
-spell you need has been encoded using a **caesar cipher**. This means that the
-letters of spell have been rotated.
+# Background
 
-For example, rotating the word "hello" X number of times results in:
+To kill this monster, you need to use a secret spell. Unfortunately, the spell
+you need has been encoded using a **caesar cipher**. This means that the letters
+of the spell have been rotated to make them hard to read.
+
+## Explanation
+
+The `rotate` spell can help you quickly "undo" the cipher. For example, assume
+you know the word "khoor" was rotated. To solve it, you could try different
+numbers of rotations as seen below:
 
 ```
-0: "hello"
-1: "ifmmp"
-2: "jgnnq"
-3: "khoor"
-...
-26: "hello"
+rotate -n 0 "ebiil"     ->     "ebiil"
+rotate -n 1 "ebiil"     ->     "fcjjm"
+rotate -n 2 "ebiil"     ->     "gdkkn"
+rotate -n 3 "ebiil"     ->     "hello"
 ```
+
+Look at that! It looks like "ebiil" is "hello" rotated!!!
+
+## Specifics
 
 Use the `rotate` spell to decode the message below and slay the monster:
 
 ```
-Kyv jgvcc wifd kyv jgvcc sffb kyrk pfl evvu kf ivdfmv kyv dfejkvi zj id
+Ocz nkzgg amjh ocz nkzgg wjjf ocvo tjp izzy oj mzhjqz ocz hjinozm dn mh
 ```
 
-Hint: The first letter of the message is a "T"
+Hint: The first letter of the message is a "T". How many times do you have to
+   "rotate" and "O" to get to a "T"?
+
 
