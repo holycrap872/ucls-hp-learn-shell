@@ -19,17 +19,18 @@
     "1": {
         "description": "Dewey decimal codes turned into ASCII art. Points to book that contains maze map.",
         "clues": [
+            "                    331 WHI",
+            "                    332.64 GEI",
             "                    342.74 CRO",
             "                    345.761 BRI",
             "                    346.08 RAW",
-            "                    591.77 VOG",
-            "                    597.31 MAC",
-            "                    332.64 GEI",
-            "                    330.15 BEC",
-            "                    364.66 KER",
+            "                    364.1 BRA",
             "                    395.123 PAC",
             "                    398.2 ZHA",
-            "                    598.97 WIL"
+            "                    591.77 VOG",
+            "                    597.31 MAC",
+            "                    598.97 WIL",
+            "                    599.536 WOO"
         ],
         "yields": "01_terminal_maze.docx"
     },
