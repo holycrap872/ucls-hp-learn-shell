@@ -96,7 +96,7 @@ def run_file_demo() -> None:
         cat_cmd = input("Not quite.... let's try that again: ")
     print("\n\n\n")
     print("Excellent!")
-    print(f"Remember, anytime you see a {bcolors.BOLD}white{bcolors.ENDC} file, think of your trusy cat.")
+    print(f"Remember, anytime you see a {bcolors.BOLD}white{bcolors.ENDC} file, think of your trusty cat.")
     time.sleep(3)
     print("I hope that helps!")
     time.sleep(3)
