@@ -30,6 +30,6 @@ Go!
 
 ## Instructions to Build
 
-1. Alter the (metadata.json)[./clues/metadata.json] file to create location specific clues
+1. Alter the [metadata.json](./clues/metadata.json) file to create location specific clues
 2. `docker build -f Dockerfile -t harry_potter .`
 3. `docker run -e IDENTIFIER=4 -it harry_potter /bin/zsh`
