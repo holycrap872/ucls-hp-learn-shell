@@ -22,7 +22,7 @@ Go!
   have to build your own version with the proper parameters if you want to
   actually run this demo with students.
 
-1. Pull down docker image from [here](https://hub.docker.com/repository/docker/erizzi/hp_terminal_tutorial/general)
+1. Pull down docker image from [here](https://hub.docker.com/r/erizzi/hp_terminal_tutorial)
 2. Run the docker image
     - `docker run -e IDENTIFIER=4 -it erizzi/hp_terminal_tutorial /bin/zsh`
     - Alter the `IDENTIFIER` env var to choose which of the 12 clue sets use
