@@ -28,3 +28,4 @@ RUN echo "alias sl=\"/usr/games/sl -F && cd /hogwarts\"" >> /home/harry/.zshrc
 RUN echo "alias cat=\"/usr/bin/wrapper_cat\"" >> /home/harry/.zshrc
 RUN echo "setuphp" >> /home/harry/.zshrc
 
+ENTRYPOINT ["/bin/zsh"]
