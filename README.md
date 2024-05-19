@@ -33,3 +33,10 @@ Go!
 1. Alter the [metadata.json](./clues/metadata.json) file to create location specific clues
 2. `docker build -f Dockerfile -t harry_potter .`
 3. `docker run -e IDENTIFIER=4 -it harry_potter /bin/zsh`
+
+## Instructions to Push
+
+1. `docker build -f Dockerfile -t harry_potter .`
+2. `docker login`
+3. `docker tag harry_potter erizzi/hp_terminal_tutorial`
+4. `docker push erizzi/hp_terminal_tutorial`
