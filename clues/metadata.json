@@ -2,17 +2,17 @@
     "0": {
         "description": "Turned into morse code. Points to location that has terminal opener.",
         "clues": [
-            "Blue bin under Mr Rizzis desk",
             "In C200 copy room under table",
             "In C200 copy room behind door",
             "In C200 copy room behind door",
+            "In C200 behind printer",
+            "In C200 under recycle bin",
             "Behind trash can in CS dept",
             "On whiteboard in CS dept",
+            "Blue bin near Mr Rizzis desk",
             "Behind door in CS dept",
             "In refrigerator in CS dept",
-            "In C224 copier machine",
-            "Behind C224 door",
-            "Under instructors desk",
+            "Under Mr Rizzis desk",
             "Under trash outside C224"
         ],
         "yields": "00_terminal_opener.docx"
