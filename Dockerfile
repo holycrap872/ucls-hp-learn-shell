@@ -15,7 +15,6 @@ COPY ./harry_home /home/harry
 
 RUN useradd -ms /bin/bash harry && \
     chown -R harry /var/hogwarts_castle/front_door && \
-    chown -R harry /var/hogwarts_castle/back_gate && \
     chown -R harry /hogwarts/crumpled_maze_clue.txt && \
     chown -R harry /home/harry
 

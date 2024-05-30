@@ -122,12 +122,13 @@ def run_dumbledore_so_close() -> None:
 
 
 if __name__ == "__main__":
-    monster_1_alive = os.path.isfile("/var/hogwarts_castle/back_gate/monster.txt")
-    monster_2_alive = os.path.isfile("/var/hogwarts_castle/front_door/monster_friend.txt")
+    # monster_1_alive = os.path.isfile("/var/hogwarts_castle/back_gate/monster.txt")
+    back_gate_done = True
+    front_door_done = os.path.isfile("/var/hogwarts_castle/front_door/monster_friend.txt")
 
-    if monster_1_alive and not monster_2_alive:
+    if not back_gate_done and not front_door_done:
         run_dumbledore_intro()
-    elif monster_1_alive or not monster_2_alive:
+    elif not back_gate_done or not front_door_done:
         run_dumbledore_so_close()
     else:
         run_dumbledore_outro()
