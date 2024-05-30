@@ -157,10 +157,10 @@ def run_dobby() -> None:
     time.sleep(3)
     print('Do you need help? Type "yes" if you do, "no" if you do not.')
     help_needed_answer = ""
-    while help_needed_answer.lower() not in ["yes", "no"]:
+    while help_needed_answer.lower().strip() not in ["yes", "no"]:
        help_needed_answer = input("Your answer: ")
 
-    if help_needed_answer.lower() == "no":
+    if help_needed_answer.lower().strip() == "no":
         print("\n")
         print("Ok, just come find me if you need help!")
         print("\n")
@@ -179,15 +179,15 @@ def run_dobby() -> None:
         print("\n")
 
         multi_answer = input("Your answer: ")
-        if multi_answer.lower() == "a":
+        if multi_answer.lower().strip() == "a":
             run_ls_demo()
-        elif multi_answer.lower() == "b":
+        elif multi_answer.lower().strip() == "b":
             run_file_demo()
-        elif multi_answer.lower() == "c":
+        elif multi_answer.lower().strip() == "c":
             run_program_demo()
-        elif multi_answer.lower() == "d":
+        elif multi_answer.lower().strip() == "d":
             run_directory_demo()
-        elif multi_answer.lower() == "e":
+        elif multi_answer.lower().strip() == "e":
             break
         else:
             print("I'm sorry, I didn't understand that.")

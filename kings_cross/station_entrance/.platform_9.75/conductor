@@ -59,7 +59,7 @@ def text_question_correct(question: str, answer: str) -> bool:
     print("\n")
 
     response = input("Your answer: ")
-    if response.lower() == answer:
+    if response.lower().strip() == answer:
         print("Impressive!")
         return True
     else:

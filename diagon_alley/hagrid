@@ -73,7 +73,7 @@ def run_hagrid() -> None:
     print("\n")
 
     answer = input("Your answer: ")
-    if answer.lower() != "b":
+    if answer.lower().strip() != "b":
         print("I'm afraid of a polyjuice imposter... not going to say anymore")
         return
 
