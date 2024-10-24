@@ -1,8 +1,13 @@
 FROM ubuntu
 
 RUN apt-get update && \
-    apt-get -y install vim sl zsh curl git python3 python3-pip && \
-    pip3 install click prompt_toolkit
+    apt-get -y install vim sl zsh curl git python3-full python3-pip && \
+    python3 -m venv /opt/venv
+
+# Add virtual environment to PATH
+ENV PATH="/opt/venv/bin:$PATH"
+
+RUN python3 -m pip install click prompt_toolkit
 
 COPY ./bin/* /usr/bin
 COPY ./hogwarts /hogwarts
@@ -27,4 +32,4 @@ RUN echo "alias sl=\"/usr/games/sl -F && cd /hogwarts\"" >> /home/harry/.zshrc
 RUN echo "alias cat=\"/usr/bin/wrapper_cat\"" >> /home/harry/.zshrc
 RUN echo "setuphp" >> /home/harry/.zshrc
 
-ENTRYPOINT ["/bin/zsh"]
+# ENTRYPOINT ["/bin/zsh"]
