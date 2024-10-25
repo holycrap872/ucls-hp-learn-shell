@@ -2,7 +2,6 @@
 import time
 import typing
 
-
 CONDUCTOR = """
           @@@@@@@@@@@@@@@@@@@@@@@@@
         @@   .:-----------------:  @@
@@ -45,11 +44,11 @@ CONDUCTOR = """
 
 
 class bcolors:
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    ENDC = '\033[0m'
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
+    ENDC = "\033[0m"
 
 
 def text_question_correct(question: str, answer: str) -> bool:
@@ -86,26 +85,10 @@ def choice_question_correct(question: str, options: typing.Dict[str, str], answe
 
 
 def question_one_correct() -> bool:
-    return text_question_correct("What color are directories/folders?", "blue")
+    return text_question_correct("What color are files?", "white")
 
 
 def question_two_correct() -> bool:
-    return choice_question_correct(
-        f"What is the correct way to cast the {bcolors.UNDERLINE}cat{bcolors.ENDC} spell?",
-        {
-            "A": f"{bcolors.UNDERLINE}./note.txt cat{bcolors.ENDC}",
-            "B": f"{bcolors.UNDERLINE}cat./note.txt{bcolors.ENDC} (i.e. no space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
-            "C": f"{bcolors.UNDERLINE}cat ./note.txt{bcolors.ENDC} (i.e. space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
-        },
-        "C",
-    )
-
-
-def question_three_correct() -> bool:
-    return text_question_correct("What color are programs?", "green")
-
-
-def question_four_correct() -> bool:
     return choice_question_correct(
         "How would you apparate to hogsmeade?",
         {
@@ -118,12 +101,32 @@ def question_four_correct() -> bool:
     )
 
 
+def question_three_correct() -> bool:
+    return text_question_correct("What color are directories/folders?", "blue")
+
+
+def question_four_correct() -> bool:
+    return choice_question_correct(
+        f"What is the correct way to cast the {bcolors.UNDERLINE}cat{bcolors.ENDC} spell?",
+        {
+            "A": f"{bcolors.UNDERLINE}./note.txt cat{bcolors.ENDC}",
+            "B": f"{bcolors.UNDERLINE}cat./note.txt{bcolors.ENDC} (i.e. no space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
+            "C": f"{bcolors.UNDERLINE}cat ./note.txt{bcolors.ENDC} (i.e. space between {bcolors.UNDERLINE}cat{bcolors.ENDC} and the file)",
+        },
+        "C",
+    )
+
+
+def question_five_correct() -> bool:
+    return text_question_correct("What color are programs?", "green")
+
+
 def run_conductor() -> None:
     print(CONDUCTOR)
     time.sleep(3)
     print("Trying to get on the train without paying???")
     time.sleep(3)
-    print("You're going to have to earn your way on by answering these four questions")
+    print("You're going to have to earn your way on by answering these questions")
 
     if not question_one_correct():
         return
@@ -137,6 +140,9 @@ def run_conductor() -> None:
     if not question_four_correct():
         return
 
+    if not question_five_correct():
+        return
+
     print("\n\n\n")
     print("Ok, I guess you earned your way. You can get on the train to hogwarts")
     print(f"Execute the spell {bcolors.UNDERLINE}sl{bcolors.ENDC} and good luck!")
@@ -145,4 +151,3 @@ def run_conductor() -> None:
 
 if __name__ == "__main__":
     run_conductor()
-

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import time
+import typing
 
 HAGRID = """
 ................................................................................
@@ -50,11 +51,77 @@ HAGRID = """
 
 
 class bcolors:
-    BLUE = '\033[94m'
-    GREEN = '\033[92m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
-    ENDC = '\033[0m'
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
+    ENDC = "\033[0m"
+
+
+def text_question_correct(question: str, answer: str) -> bool:
+    time.sleep(3)
+    print("\n\n\n")
+    print("Q: " + question)
+    print("\n")
+
+    response = input("Your answer: ")
+    if response.lower().strip() == answer:
+        print("Seems like it might really be you...")
+        return True
+    else:
+        print("I'm afraid of a polyjuice imposter... not going to say anymore")
+        return False
+
+
+def choice_question_correct(
+    question: str,
+    options: typing.Dict[str, str],
+    answer: str,
+    *,
+    more_questions=True,
+) -> bool:
+    time.sleep(3)
+    print("\n\n\n")
+    print("Q: " + question)
+    for option in sorted(options):
+        question = options[option]
+        print("   {}: {}".format(option, question))
+    print("\n")
+
+    response = input("Your answer: ")
+    if response.lower() == answer.lower():
+        if more_questions:
+            print("Seems like it might really be you...")
+        return True
+    else:
+        print("I'm afraid of a polyjuice imposter... not going to say anymore")
+        return False
+
+
+def question_one_correct() -> bool:
+    return choice_question_correct(
+        "What is the best definition of abstraction?",
+        {
+            "A": "Weird over-priced art",
+            "B": "Removing unnecessary details",
+            "C": "A stomach workout",
+        },
+        "B",
+    )
+
+
+def question_two_correct() -> bool:
+    return choice_question_correct(
+        'What is the word "bit" short for?',
+        {
+            "A": "Bright lights",
+            "B": "Bytes and Terabytes",
+            "C": "Bits of a computer",
+            "D": "Binary digit",
+        },
+        "D",
+        more_questions=False,
+    )
 
 
 def run_hagrid() -> None:
@@ -63,18 +130,12 @@ def run_hagrid() -> None:
     print("Harry, is that you? Can't be too careful!")
     print("\n")
     time.sleep(3)
-    print("Answer this question that only you would know...")
-    print("\n\n\n")
-    time.sleep(3)
-    print("Q: What is the best definition of abstraction:")
-    print("   A: Weird over-priced art")
-    print("   B: Removing unnecessary details")
-    print("   C: A stomach workout")
-    print("\n")
+    print("Answer these questions that only you would know...")
 
-    answer = input("Your answer: ")
-    if answer.lower().strip() != "b":
-        print("I'm afraid of a polyjuice imposter... not going to say anymore")
+    if not question_one_correct():
+        return
+
+    if not question_two_correct():
         return
 
     print("\n\n\n")
@@ -84,7 +145,9 @@ def run_hagrid() -> None:
     print("\n\n\n")
     time.sleep(10)
 
-    print(f"Notice that there is a SPACE between the spell ({bcolors.UNDERLINE}ls{bcolors.ENDC}) and what follows ({bcolors.UNDERLINE}-al{bcolors.ENDC})")
+    print(
+        f"Notice that there is a SPACE between the spell ({bcolors.UNDERLINE}ls{bcolors.ENDC}) and what follows ({bcolors.UNDERLINE}-al{bcolors.ENDC})"
+    )
     time.sleep(3)
 
     print("Let's try it now!")
@@ -93,7 +156,7 @@ def run_hagrid() -> None:
         ls_al = input("Not quite.... let's try that again: ")
 
     print("\n\n\n")
-    time.sleep(.5)
+    time.sleep(0.5)
     print("You got it! Now look at all the new stuff you can see in this directory:")
     time.sleep(2)
     print("drwxr-xr-x 4 root  root   128 Oct 14 15:15 .")
