@@ -109,7 +109,9 @@ def run_dumbledore_outro() -> None:
     print("Now it's time to claim your prize")
     time.sleep(3)
     print("1. Make sure your volume is on")
-    print("2. Open up a new terminal (Applications/Utilities/Terminal)")
+    print("2. Open up a new terminal by:")
+    print("    - Clicking `Shell` on the top menu")
+    print("    - Clicking `New Window`")
     print(f"3. Run the spell {bcolors.UNDERLINE}say I won give me candy Mr Rizzi{bcolors.ENDC}")
     time.sleep(3)
 
